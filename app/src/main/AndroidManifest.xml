@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/iconround"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotawaringinBaratTourist">
+        <activity android:name=".explain"></activity>
+        <activity android:name=".about" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

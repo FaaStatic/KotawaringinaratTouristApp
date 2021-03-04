@@ -1,5 +1,6 @@
 package com.suhaili.kotawaringinbarattourist.Data
 
+import com.suhaili.kotawaringinbarattourist.Model.KobarModel
 import com.suhaili.kotawaringinbarattourist.R
 
 object KobarData {
@@ -56,4 +57,15 @@ object KobarData {
         "",
         ""
     )
+
+    val getDataKobar : ArrayList<KobarModel>
+        get() {
+            var datadata : ArrayList<KobarModel> = ArrayList()
+            val batas = 0.rangeTo(destination.size)
+            for (i in batas){
+                val indata = KobarModel(gbr[i],destination[i],location[i], detail[i])
+                datadata.add(indata)
+            }
+            return datadata
+        }
 }
