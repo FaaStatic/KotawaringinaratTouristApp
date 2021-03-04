@@ -3,14 +3,20 @@
     <style name="Theme.KotawaringinBaratTourist" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#85603f</item>
-        <item name="colorPrimaryVariant">#9e7540</item>
+        <item name="colorPrimaryVariant">#85603f</item>
         <item name="colorOnPrimary">#e3d18a</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#e3d18a</item>
-        <item name="colorSecondaryVariant">#9e7540</item>
+        <item name="colorSecondary">#9e7540</item>
+        <item name="colorSecondaryVariant">#85603f</item>
         <item name="colorOnSecondary">#85603f</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat">
+        <item name="fontFamily">@font/cookbooktitle</item>
+        <item name="android:textColor">#e3d18a</item>
+        <item name="android:textSize">20sp</item>
     </style>
 </resources>

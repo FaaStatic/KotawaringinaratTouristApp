@@ -1,16 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.KotawaringinBaratTourist" parent="Theme.AppCompat.DayNight">
+    <style name="Theme.KotawaringinBaratTourist" parent="Theme.AppCompat.Light">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#85603f</item>
+        <item name="colorPrimary">#9e7540</item>
         <item name="colorPrimaryVariant">#9e7540</item>
         <item name="colorOnPrimary">#e3d18a</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#e3d18a</item>
+        <item name="colorSecondary">#85603f</item>
         <item name="colorSecondaryVariant">#9e7540</item>
-        <item name="colorOnSecondary">#85603f</item>
+        <item name="colorOnSecondary">#e3d18a</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/cookbooktitle</item>
+        <item name="android:textColor">#e3d18a</item>
+        <item name="android:textSize">20sp</item>
     </style>
 </resources>

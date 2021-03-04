@@ -12,7 +12,7 @@
     </style>
 
     <style name="copyright">
-        <item name="android:text">Copyright &#169;Suhaili Faruq 2021</item>
+        <item name="android:text">Copyright&#169;Suhaili Faruq 2021</item>
         <item name="android:fontFamily">monospace</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
@@ -32,5 +32,9 @@
     <style name="bglist">
         <item name="android:background">#e3d18a</item>
     </style>
+
+
+
+
 
 </resources>
