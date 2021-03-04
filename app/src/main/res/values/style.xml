@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="brand">
+        <item name="android:padding">10dp</item>
+       <item name="android:shadowColor">#85603f</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:text">Kotawaringin Barat Tourist</item>
+        <item name="android:fontFamily">@font/touristtrap</item>
+        <item name="android:textColor">#e3d18a</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="copyright">
+        <item name="android:text">Copyright &#169;Suhaili Faruq 2021</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#e3d18a</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+    <style name="bgSplash">
+        <item name="android:background">#9e7540</item>
+    </style>
+    
+    <style name="title">
+        <item name="android:fontFamily">@font/cookbooktitle</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="bglist">
+        <item name="android:background">#e3d18a</item>
+    </style>
+
+</resources>
