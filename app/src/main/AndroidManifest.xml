@@ -9,10 +9,8 @@
         android:roundIcon="@mipmap/iconround"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotawaringinBaratTourist">
-        <activity android:name=".explain"
-            android:theme="@style/Theme.KotawaringinBaratTourist"></activity>
-        <activity android:name=".about"
-            android:theme="@style/Theme.KotawaringinBaratTourist"/>
+        <activity android:name=".explain"></activity>
+        <activity android:name=".about" />
         <activity android:name=".Splash"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>

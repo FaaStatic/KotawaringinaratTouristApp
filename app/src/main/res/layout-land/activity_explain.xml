@@ -1,10 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    style="@style/bglist"
     android:layout_height="match_parent"
+    style="@style/bglist"
+    android:orientation="vertical"
     tools:context=".explain">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginBottom="15dp"
+                    android:contentDescription="@string/picture_destination" />
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="236dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginEnd="141dp"
+                    android:layout_marginBottom="41dp"
+                    android:padding="5dp"
+                    android:textAlignment="textStart" />
+
+                <Button
+                    android:id="@+id/like"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="737dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/like" />
+
+                <Button
+                    android:id="@+id/share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="788dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/share" />
+
+                <Button
+                    android:id="@+id/kembali"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/abc_vector_test"
+                    android:backgroundTint="@android:color/holo_orange_light" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:padding="15dp"
+                android:textAlignment="textStart" />
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:textAlignment="gravity" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

@@ -7,15 +7,15 @@ object KobarData {
 
     private val gbr:IntArray = intArrayOf(
         R.drawable.tanjungputingnaturepark,
-        R.drawable.tanjungkluangnaturepark,
+        R.drawable.tanjungkeluangnaturepark,
         R.drawable.kububeach,
         R.drawable.arutriver,
-        R.drawable.kampungsega,
+        R.drawable.segavillage,
         R.drawable.yellowcastle,
         R.drawable.princemangkubumicastle,
         R.drawable.betangtraditionalhouse,
         R.drawable.alnursaricastle,
-        R.drawable.suayapwaterfall
+        R.drawable.suwayapwaterfall
     )
 
     private val destination = arrayOf(
@@ -55,13 +55,12 @@ object KobarData {
         "",
         "",
         "",
-        ""
     )
 
     val getDataKobar : ArrayList<KobarModel>
         get() {
             var datadata : ArrayList<KobarModel> = ArrayList()
-            val batas = 0.rangeTo(destination.size)
+            val batas = 0.rangeTo(destination.size-1)
             for (i in batas){
                 val indata = KobarModel(gbr[i],destination[i],location[i], detail[i])
                 datadata.add(indata)
