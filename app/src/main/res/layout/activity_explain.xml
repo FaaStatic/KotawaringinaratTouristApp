@@ -14,8 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:orientation="vertical"
-        android:padding="3dp">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,28 +26,25 @@
             <ImageView
                 android:id="@+id/pic"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="14dp"
-                android:layout_marginBottom="15dp"
                 android:contentDescription="@string/picture_destination" />
 
             <TextView
                 android:id="@+id/judul"
-                android:layout_width="236dp"
-                android:layout_height="40dp"
+                style="@style/explainTitle"
+                android:layout_width="346dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="29dp"
-                android:layout_marginEnd="141dp"
-                android:layout_marginBottom="41dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="58dp"
+                android:layout_marginBottom="191dp"
                 android:padding="3dp"
                 android:textAlignment="textStart" />
 
@@ -58,36 +54,60 @@
                 android:layout_height="30dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="270dp"
-                android:layout_marginTop="43dp"
+                android:layout_marginStart="299dp"
+                android:layout_marginTop="205dp"
                 android:background="@drawable/like" />
 
             <Button
                 android:id="@+id/share"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:backgroundTint="@color/base"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="323dp"
-                android:layout_marginTop="43dp"
+                android:layout_marginStart="345dp"
+                android:layout_marginTop="205dp"
                 android:background="@drawable/share" />
 
 
         </RelativeLayout>
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="10dp"
-                android:padding="5dp"
-                android:textAlignment="textStart" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:layout_marginBottom="1dp"
+            android:paddingLeft="10dp"
+            style="@style/explainLokasi"
+            android:textAlignment="textStart" />
 
+        <TextView
+            android:id="@+id/location"
+            style="@style/explainLokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="1dp"
+            android:paddingRight="2.5dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="textStart" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail"
+            android:layout_marginBottom="1dp"
+            android:paddingLeft="10dp"
+            style="@style/explainLokasi"
+            android:textAlignment="textStart" />
             <TextView
                 android:id="@+id/detail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp"
-                android:textAlignment="inherit" />
+                android:paddingTop="1dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="2.5dp"
+                style="@style/explainDetail" />
         </LinearLayout>
 
 

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.title="List Pariwisata"
+        supportActionBar?.title="List of Tourism Locations"
         Recycle  = findViewById(R.id.viewrecycler)
         Recycle.setHasFixedSize(true)
         prosesdata.addAll(KobarData.getDataKobar)
