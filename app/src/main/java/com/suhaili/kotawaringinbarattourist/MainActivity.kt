@@ -43,12 +43,6 @@ class MainActivity : AppCompatActivity() {
             R.id.about-> {
                 startActivity(Intent(this,about::class.java))
             }
-            R.id.list ->{
-                listview()
-            }
-            R.id.gridview->{}
-            R.id.cardview->{}
-
         }
         return super.onOptionsItemSelected(item)
     }
