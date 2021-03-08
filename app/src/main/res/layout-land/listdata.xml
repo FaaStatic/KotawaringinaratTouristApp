@@ -1,35 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
     android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
     android:background="@drawable/shape"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
+    android:padding="3dp"
     android:id="@+id/listview">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:layout_height="95dp"
         android:layout_marginBottom="10dp">
+
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/listviewpic"/>
+            android:id="@+id/listviewpic"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.015"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.266" />
 
         <TextView
             android:id="@+id/listviewjudul"
-            android:layout_width="262dp"
-            android:layout_height="97dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginEnd="26dp"
             style="@style/listviewtitle"
+            android:layout_width="600dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/listviewpic"
-            android:padding="2dp" />
+            android:padding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/listviewpic"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/listviewlok"
+            style="@style/listviewlokasi"
+            android:layout_width="600dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/listviewjudul"
+
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/listviewpic"
+            android:padding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/listviewpic"
+            app:layout_constraintTop_toBottomOf="@+id/listviewjudul" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

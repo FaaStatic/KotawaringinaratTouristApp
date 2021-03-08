@@ -8,14 +8,14 @@
     tools:context=".MainActivity">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
+        android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/viewrecycler"
-            android:padding="25dp"/>
+            android:padding="5dp"
+            tools:listitem="@layout/listdata"/>
 
     </ScrollView>
 

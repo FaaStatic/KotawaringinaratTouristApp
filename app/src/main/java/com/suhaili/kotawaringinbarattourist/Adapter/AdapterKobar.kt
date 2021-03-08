@@ -27,9 +27,10 @@ class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<Adap
             val destination = listing[position]
         Glide.with(holder.itemView.context)
             .load(destination.pic)
-            .apply(RequestOptions().override(100, 100))
+                .apply(RequestOptions().override(75,75))
             .into(holder.gambar)
         holder.judul.text = destination.destination
+        holder.lok.text = destination.location
         holder.itemView.setOnClickListener {
             val move = Intent(holder.itemView.context,explain::class.java)
             move.putExtra("judul",destination.destination)
@@ -47,6 +48,7 @@ class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<Adap
     inner class itemTarget(itemView: View) : RecyclerView.ViewHolder(itemView) {
             var gambar : ImageView = itemView.findViewById(R.id.listviewpic)
             var judul : TextView = itemView.findViewById(R.id.listviewjudul)
+            var lok : TextView = itemView.findViewById(R.id.listviewlok)
 
     }
 }

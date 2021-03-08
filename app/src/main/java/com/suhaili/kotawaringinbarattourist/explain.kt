@@ -25,7 +25,6 @@ lateinit var judul : TextView
 
         Glide.with(this)
             .load(data?.getInt("picture"))
-            .apply(RequestOptions().override(1000,250))
             .into(gambar)
 
         judul.text = data?.getString("judul")

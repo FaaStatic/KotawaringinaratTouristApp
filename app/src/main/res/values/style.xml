@@ -34,13 +34,24 @@
     </style>
 
     <style name="listviewtitle">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">5dp</item>
         <item name="android:fontFamily">sans-serif-black</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/textsuctom</item>
 
     </style>
 
+
+    <style name="listviewlokasi">
+        <item name="android:textSize">10sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#e3d18a</item>
+
+    </style>
 
 
 

@@ -15,19 +15,20 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="3dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <ImageView
                     android:id="@+id/pic"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
@@ -48,7 +49,7 @@
                     android:layout_marginStart="29dp"
                     android:layout_marginEnd="141dp"
                     android:layout_marginBottom="41dp"
-                    android:padding="5dp"
+                    android:padding="3dp"
                     android:textAlignment="textStart" />
 
                 <Button
@@ -57,8 +58,8 @@
                     android:layout_height="30dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="737dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="600dp"
+                    android:layout_marginTop="43dp"
                     android:background="@drawable/like" />
 
                 <Button
@@ -67,20 +68,10 @@
                     android:layout_height="30dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="788dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="650dp"
+                    android:layout_marginTop="43dp"
                     android:background="@drawable/share" />
 
-                <Button
-                    android:id="@+id/kembali"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="25dp"
-                    android:background="@drawable/abc_vector_test"
-                    android:backgroundTint="@android:color/holo_orange_light" />
 
             </RelativeLayout>
             <TextView
@@ -88,15 +79,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="10dp"
-                android:padding="15dp"
+                android:padding="5dp"
                 android:textAlignment="textStart" />
 
             <TextView
                 android:id="@+id/detail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="15dp"
-                android:textAlignment="gravity" />
+                android:padding="5dp"
+                android:textAlignment="inherit" />
         </LinearLayout>
 
 
