@@ -6,21 +6,4 @@
     android:icon="@drawable/about"
     app:showAsAction="ifRoom"
     />
-
-    <item android:id="@+id/list"
-        android:title="Listview"
-        app:showAsAction="collapseActionView"/>
-
-    <item android:id="@+id/cardview"
-        android:title="Cardview"
-        app:showAsAction="collapseActionView"/>
-
-    <item android:id="@+id/gridview"
-        android:title="Gridview"
-        app:showAsAction="collapseActionView"/>
-
-
-
-
-
 </menu>
