@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="2dp"
+    android:elevation="2dp"
+    android:paddingRight="2dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/shapelist">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/customlistpic"
+            android:scaleType="fitXY"/>
+
+
+        <TextView
+            android:id="@+id/customlisttitle"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_marginStart="16dp"
+            android:layout_gravity="bottom"
+            style="@style/PicListtitle"
+            android:layout_marginBottom="16dp"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

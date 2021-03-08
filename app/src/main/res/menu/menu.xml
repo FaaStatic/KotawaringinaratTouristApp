@@ -6,4 +6,11 @@
     android:icon="@drawable/about"
     app:showAsAction="ifRoom"
     />
+
+    <item
+        android:id="@+id/Listviewchange"
+        android:icon="@drawable/listbutton"
+        android:title="List"
+        app:showAsAction="ifRoom" />
+
 </menu>

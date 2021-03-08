@@ -17,22 +17,21 @@ import com.suhaili.kotawaringinbarattourist.R
 import com.suhaili.kotawaringinbarattourist.explain
 import kotlin.math.round
 
-class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<AdapterKobar.itemTarget>() {
+class AdapterKobarList(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<AdapterKobarList.itemTarget>() {
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterKobar.itemTarget {
-        val seen = LayoutInflater.from(parent.context).inflate(R.layout.customlist,parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterKobarList.itemTarget {
+        val seen = LayoutInflater.from(parent.context).inflate(R.layout.listdata,parent,false)
         return itemTarget(seen)
     }
 
-    override fun onBindViewHolder(holder: AdapterKobar.itemTarget, position: Int) {
+    override fun onBindViewHolder(holder: AdapterKobarList.itemTarget, position: Int) {
             val destination = listing[position]
             Glide.with(holder.itemView.context)
                 .load(destination.pic)
-                .apply(RequestOptions().transform(RoundedCorners(30)))
                 .into(holder.gambar)
         holder.judul.text = destination.destination
-        //holder.lok.text = destination.location
+        holder.lok.text = destination.location
         holder.itemView.setOnClickListener {
             val move = Intent(holder.itemView.context,explain::class.java)
             move.putExtra("judul",destination.destination)
@@ -48,9 +47,9 @@ class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<Adap
     }
 
     inner class itemTarget(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            var gambar : ImageView = itemView.findViewById(R.id.customlistpic)
-            var judul : TextView = itemView.findViewById(R.id.customlisttitle)
-         //   var lok : TextView = itemView.findViewById(R.id.listviewlok)
+            var gambar : ImageView = itemView.findViewById(R.id.listviewpic)
+            var judul : TextView = itemView.findViewById(R.id.listviewjudul)
+          var lok : TextView = itemView.findViewById(R.id.listviewlok)
 
     }
 }

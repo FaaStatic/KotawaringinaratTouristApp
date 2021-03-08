@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/viewrecycler"
             android:padding="5dp"
-            tools:listitem="@layout/listdata"/>
+            tools:listitem="@layout/customlist"/>
 
     </ScrollView>
 
