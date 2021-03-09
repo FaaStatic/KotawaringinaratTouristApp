@@ -32,7 +32,6 @@ class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<Adap
                 .apply(RequestOptions().transform(RoundedCorners(30)))
                 .into(holder.gambar)
         holder.judul.text = destination.destination
-        //holder.lok.text = destination.location
         holder.itemView.setOnClickListener {
             val move = Intent(holder.itemView.context,explain::class.java)
             move.putExtra("judul",destination.destination)
@@ -50,7 +49,6 @@ class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<Adap
     inner class itemTarget(itemView: View) : RecyclerView.ViewHolder(itemView) {
             var gambar : ImageView = itemView.findViewById(R.id.customlistpic)
             var judul : TextView = itemView.findViewById(R.id.customlisttitle)
-         //   var lok : TextView = itemView.findViewById(R.id.listviewlok)
 
     }
 }

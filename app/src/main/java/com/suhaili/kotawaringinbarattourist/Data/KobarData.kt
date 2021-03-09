@@ -52,8 +52,8 @@ object KobarData {
             """    Tanjung Puting National Park was originally a nature reserve and wildlife reserve established by the Dutch East Indies Government in 1937.
                Then on October 25, 1996, Tanjung Puting was designated as a National Park with a total area of ​​415,040 ha.
                Geographically, Tanjung Puting National Park is located in Kumai District, Kotawaringin Barat Regency and in Hanau, Danau Sembuluh, and Seruyan Hilir Districts in Seruyan Regency, Central Kalimantan Province.
-               This tourist spot is almost similar to a national park in general. It's just that the population of various monkey species is more dominant than other animals in this tourist location. For example, proboscis monkeys, long-tailed monkeys, Kalimantan gibbons, and
-               orangutans are very numerous and varied. There are also various rare birds and various types of crocodiles in this tourist location.
+               This tourist spot is almost similar to a national park in general. It's just that the population of various monkey species is more dominant than other animals in this tourist location. 
+               For example, proboscis monkeys, long-tailed monkeys, Kalimantan gibbons, and orangutans are very numerous and varied. There are also various rare birds and various types of crocodiles in this tourist location.
                If you want to go to the location, please just come to Kumai District, then take a tour boat down the Sekonyer River for about 4 hours.
                Usually, one boat can accommodate 25-50 people, so if a group arrives, it will be cheaper because one rental is only Rp. 165,000.""".trimIndent().toString(),
             """     Tanjung Keluang is a turtle conservation area that was opened in 2000 and is managed by the Kotawaringin Barat Tourism Office. Here, tourists can get direct experience releasing turtle hatchlings to the beach.

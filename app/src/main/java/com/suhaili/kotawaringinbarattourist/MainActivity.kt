@@ -1,11 +1,11 @@
 package com.suhaili.kotawaringinbarattourist
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.suhaili.kotawaringinbarattourist.Adapter.AdapterKobar
@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         Recycle.setHasFixedSize(true)
         prosesdata.addAll(KobarData.getDataKobar)
         listviewpic()
+
+
     }
 
     fun listviewpic(){
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         when(item.itemId){
             R.id.about-> {
                 startActivity(Intent(this,about::class.java))
+                finish()
             }R.id.Listviewchange->{
                 if(listpic == true){
                     listview()
@@ -60,6 +63,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 
 
