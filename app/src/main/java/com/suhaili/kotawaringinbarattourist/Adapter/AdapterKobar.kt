@@ -14,25 +14,28 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.suhaili.kotawaringinbarattourist.Model.KobarModel
 import com.suhaili.kotawaringinbarattourist.R
+import com.suhaili.kotawaringinbarattourist.databinding.CustomlistBinding
+import com.suhaili.kotawaringinbarattourist.databinding.ListdataBinding
 import com.suhaili.kotawaringinbarattourist.explain
+
 import kotlin.math.round
 
 class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<AdapterKobar.itemTarget>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterKobar.itemTarget {
-        val seen = LayoutInflater.from(parent.context).inflate(R.layout.customlist,parent,false)
+       val seen =CustomlistBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return itemTarget(seen)
     }
 
     override fun onBindViewHolder(holder: AdapterKobar.itemTarget, position: Int) {
             val destination = listing[position]
-            Glide.with(holder.itemView.context)
+            Glide.with(holder.viewBind.root)
                 .load(destination.pic)
                 .apply(RequestOptions().transform(RoundedCorners(30)))
-                .into(holder.gambar)
-        holder.judul.text = destination.destination
-        holder.itemView.setOnClickListener {
+                .into(holder.viewBind.customlistpic)
+        holder.viewBind.customlisttitle.text = destination.destination
+        holder.viewBind.root.setOnClickListener {
             val move = Intent(holder.itemView.context,explain::class.java)
             move.putExtra("judul",destination.destination)
             move.putExtra("picture",destination.pic)
@@ -46,9 +49,8 @@ class AdapterKobar(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<Adap
        return listing.size
     }
 
-    inner class itemTarget(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            var gambar : ImageView = itemView.findViewById(R.id.customlistpic)
-            var judul : TextView = itemView.findViewById(R.id.customlisttitle)
+    inner class itemTarget(val viewBind : CustomlistBinding) : RecyclerView.ViewHolder(viewBind.root) {
+
 
     }
 }

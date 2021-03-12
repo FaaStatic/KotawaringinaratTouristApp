@@ -4,6 +4,7 @@ package com.suhaili.kotawaringinbarattourist
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,17 +13,19 @@ import com.suhaili.kotawaringinbarattourist.Adapter.AdapterKobar
 import com.suhaili.kotawaringinbarattourist.Adapter.AdapterKobarList
 import com.suhaili.kotawaringinbarattourist.Data.KobarData
 import com.suhaili.kotawaringinbarattourist.Model.KobarModel
+import com.suhaili.kotawaringinbarattourist.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var BindView : ActivityMainBinding
     private lateinit var Recycle : RecyclerView
     private var prosesdata : ArrayList<KobarModel> = arrayListOf()
     var listpic = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        BindView = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(BindView.root)
         supportActionBar?.title="List of Tourism Locations"
-        Recycle  = findViewById(R.id.viewrecycler)
+        Recycle  = BindView.viewrecycler
         Recycle.setHasFixedSize(true)
         prosesdata.addAll(KobarData.getDataKobar)
         listviewpic()

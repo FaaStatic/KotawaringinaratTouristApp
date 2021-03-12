@@ -14,6 +14,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.suhaili.kotawaringinbarattourist.Model.KobarModel
 import com.suhaili.kotawaringinbarattourist.R
+import com.suhaili.kotawaringinbarattourist.databinding.ListdataBinding
 import com.suhaili.kotawaringinbarattourist.explain
 import kotlin.math.round
 
@@ -21,18 +22,18 @@ class AdapterKobarList(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterKobarList.itemTarget {
-        val seen = LayoutInflater.from(parent.context).inflate(R.layout.listdata,parent,false)
+        val seen = ListdataBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return itemTarget(seen)
     }
 
     override fun onBindViewHolder(holder: AdapterKobarList.itemTarget, position: Int) {
             val destination = listing[position]
-            Glide.with(holder.itemView.context)
+            Glide.with(holder.ViewBindList.root)
                 .load(destination.pic)
-                .into(holder.gambar)
-        holder.judul.text = destination.destination
-        holder.lok.text = destination.location
-        holder.itemView.setOnClickListener {
+                .into(holder.ViewBindList.listviewpic)
+        holder.ViewBindList.listviewjudul.text = destination.destination
+        holder.ViewBindList.listviewlok.text = destination.location
+        holder.ViewBindList.root.setOnClickListener {
             val move = Intent(holder.itemView.context,explain::class.java)
             move.putExtra("judul",destination.destination)
             move.putExtra("picture",destination.pic)
@@ -46,10 +47,8 @@ class AdapterKobarList(val listing:ArrayList<KobarModel>): RecyclerView.Adapter<
        return listing.size
     }
 
-    inner class itemTarget(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            var gambar : ImageView = itemView.findViewById(R.id.listviewpic)
-            var judul : TextView = itemView.findViewById(R.id.listviewjudul)
-          var lok : TextView = itemView.findViewById(R.id.listviewlok)
+    inner class itemTarget(val ViewBindList : ListdataBinding) : RecyclerView.ViewHolder(ViewBindList.root) {
+
 
     }
 }
